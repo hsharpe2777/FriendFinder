@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<head>
+    <title>FriendFinder Survey</title>
+</head>
+<!-- link to bootstrap stylesheet-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- link to css stykesheet-->
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<body>
+    <div class="page-header">
+        <h1 class="main-header"><a class="link-to-home" href="/">FriendFinder</a><small></h1>
+    </div>
+    <div class=row>
+        <dic class="col-sm-10">
+            <div class="panel panel-default survey-panel">
+                <div class="panel-heading">
+                    <h2 class=survey-heading>Survey</h2></div>
+                <div class="panel-body">
+                    <h3 class="section">About You</h3>
+                    <label>Name</label>
+                    <br>
+                    <input type="text" id="name">
+                    <label>Link to Photo Image</label>
+                    <br>
+                    <input type="text" id="photo-link">
+                    <!-- Question 1 -->
+                    <h3 class="section">Question 1</h3>
+                    <label>Your mind is always buzzing with unexplored ideas and plans.</label>
+                    <br>
+                    <select class="selectpicker" id="question1">
+                        <option value="0">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <br>
+                    <br>
+                    <!-- Question 2 -->
+                    <h3 class="section">Question 2</h3>
+                    <label>You would rather hangout with a large group of people at once.</label>
+                    <br>
+                    <select class="selectpicker" id="question2">
+                        <option value="0">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <br>
+                    <br>
+                    <!-- Question 3 -->
+                    <h3 class="section">Question 3</h3>
+                    <label>You enjoy 1:1 "friend dates".</label>
+                    <br>
+                    <select class="selectpicker" id="question3">
+                        <option value="0">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <br>
+                    <br>
+                    <!-- Question 4 -->
+                    <h3 class="section">Question 4</h3>
+                    <label>You love to dance.</label>
+                    <br>
+                    <select class="selectpicker" id="question4">
+                        <option value="0">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <br>
+                    <br>
+                    <!-- Question 5 -->
+                    <h3 class="section">Question 5</h3>
+                    <label>Your into sports.</label>
+                    <br>
+                    <select class="selectpicker" id="question5">
+                        <option value="0">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <br>
+                    <br>
+                    <!-- Question 6 -->
+                    <h3 class="section">Question 6</h3>
+                    <label>Prefer hanging out on weekends only</label>
+                    <br>
+                    <select class="selectpicker" id="question6">
+                        <option value="0">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <br>
+                    <br>
+                    <!-- Question 7 -->
+                    <h3 class="section">Question 7</h3>
+                    <label>You enjoy alone time.</label>
+                    <br>
+                    <select class="selectpicker" id="question7">
+                        <option value="0">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <br>
+                    <button type="submit" class="btn btn-default submit-survey">Submit</button>
+                </div>
+                <br>
+                <br>
+            </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+        </div>
+    </div>
+    <a href="/api/friends">API Friends List | </a><a href="nowhere">GitHub Repo</a>
+    <!-- modal popup -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h1>Best Match</h1>
+            <h3 class=matchName></h3>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+//-----------------------------------------------
+
+$(".submit-survey").on("click", function(event) {
+    event.preventDefault();
+
+    // Here we grab the form elements
+    //------------------------------------------------------
+    if ($('#name').val().trim() === "") {
+        alert("please add name");
+    } else if ($('#photo-link').val().trim() === "") {
+        alert("please add link to your photo");
+    } else if ($('#question1').val().trim() == "0") {
+        alert("Please select an answer for all");
+
+    } else if ($('#question2').val().trim() == "0") {
+        alert("Please select an answer for all");
+
+    } else if ($('#question3').val().trim() == "0") {
+        alert("Please select an answer for all");
+
+    } else if ($('#question4').val().trim() == "0") {
+        alert("Please select an answer for all");
+
+    } else if ($('#question5').val().trim() == "0") {
+        alert("Please select an answer for all");
+
+    } else if ($('#question6').val().trim() == "0") {
+        alert("Please select an answer for all");
+    } else if ($('#question7').val().trim() == "0") {
+        alert("Please select an answer for all");
+    } else {
+        //------------------------------------------------------
+        var newFriend = {
+            name: $('#name').val().trim(),
+            photo: $('#photo-link').val().trim(),
+            scores: [
+                parseInt($('#question1').val().trim()),
+                parseInt($('#question2').val().trim()),
+                parseInt($('#question3').val().trim()),
+                parseInt($('#question4').val().trim()),
+                parseInt($('#question5').val().trim()),
+                parseInt($('#question6').val().trim()),
+                parseInt($('#question7').val().trim())
+            ]
+        };
+
+
+        // Creating a div to hold the results
+        var resultsDiv = $("<div class='results'>");
+
+
+        //call the findMatch function
+        findMatch();
+
+        //clear out survey fields
+        $('#name').val("")
+        $('#photo-link').val("")
+        $('#question1').val(0)
+        $('#question2').val(0)
+        $('#question3').val(0)
+        $('#question4').val(0)
+        $('#question5').val(0)
+        $('#question6').val(0)
+        $('#question7').val(0)
+
+        var currentURL = window.location.origin;
+
+
+        $.post(currentURL + "/api/friends", newFriend);
+        // }
+
+
+
+        function findMatch() {
+
+            // Here we get the location of the root page.
+            // We use this instead of expli.citly saying the URL is localhost:3001 because the url will change when we deploy.
+            var currentURL = window.location.origin;
+
+            // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+            $.ajax({
+                    url: currentURL + "/api/friends",
+                    method: "GET"
+                })
+                .done(function(friends) {
+
+                    // Here we are logging the URL so we have access to it for troubleshooting
+                    console.log("------------------------------------");
+                    console.log("URL: " + currentURL + "/api/friends");
+                    console.log("------------------------------------");
+
+                    //pull match data
+                    // var finalScores = friends[0].scores;
+                    var name = friends[0].name;
+                    var imgURL = friends[0].photo;
+
+                    // Creating an element to hold the image
+                    var image = $("<img>").attr("src", imgURL);
+
+
+                    //-----------------Modal Code-----------------
+
+                    var modal = document.getElementById('myModal');
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+
+
+                    //add to reults to modal 
+                    // resultsDiv.append(finalScores);
+                    // resultsDiv.append(name);
+                    resultsDiv.append(image);
+
+
+                    $('.matchName').append(name);
+                    $('.modal-content').append(resultsDiv);
+
+
+                    // When the user clicks the button, open the modal 
+
+                    modal.style.display = "block";
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+
+                });
+
+        };
+
+    };
+
+});
+</script>

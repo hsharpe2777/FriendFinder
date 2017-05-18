@@ -1,0 +1,25 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "\"FriendFinder\" application. This full-stack site will take in results your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsharpe2777/FriendFinder.git"
+  },
+  "author": "Henrietta Sharpe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hsharpe2777/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/hsharpe2777/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "path": "^0.12.7"
+  }
+}
